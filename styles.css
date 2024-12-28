@@ -8,24 +8,42 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 1fr 1fr 6fr;
     background-color: rgb(211, 211, 211);
+    gap: 40px;
   }
   
   .navigation {
     background-color: rgb(16, 143, 255);
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     grid-row: 1 / 2;
   }
   
   .sidebar {
-    background-color: rgb(201, 201, 201);
+    border: 1px solid black;
     grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    margin-left: 10%;
+  }
+
+  .suggestions {
+    border: 1px solid red;
+    grid-row: 2 / 4;
+    grid-column: 3 / 4;
+    margin-right: 10%;
+  }
+
+
+  .post-editor {
+    border: 4px solid hotpink;
+    grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
   
-  .card-container {
-    background-color: rgb(255, 255, 255);
-    grid-row: 2 / 3;
+  .posts-container {
+    border: 2px solid forestgreen;
+    grid-row: 3 / 4;
     grid-column: 2 / 3;
   }
+
+
