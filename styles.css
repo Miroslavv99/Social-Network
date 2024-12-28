@@ -7,27 +7,30 @@
   .main {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 1fr 6fr;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(241, 241, 241);
     gap: 40px;
   }
   
   .navigation {
-    background-color: rgb(16, 143, 255);
+    background-color: rgb(220, 79, 61);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     grid-column: 1 / 4;
     grid-row: 1 / 2;
   }
   
   .sidebar {
-    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     margin-left: 10%;
   }
 
   .suggestions {
-    border: 1px solid red;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
     grid-row: 2 / 4;
     grid-column: 3 / 4;
     margin-right: 10%;
@@ -35,15 +38,64 @@
 
 
   .post-editor {
-    border: 4px solid hotpink;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
+
+  .input-container {
+    display: flex;
+    position: relative;
+    width: 70%;
+    height: 70%;
+  }
+
+  #post-input {
+    padding-right: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(241, 241, 241);
+    text-indent: 5%;
+    font-size: 1rem;
+    box-shadow: inset 0 0px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  #share {
+    height: 75%;
+    width: 22%;
+    border-radius: 30px;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    background-color: rgb(220, 79, 61);
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
   
   .posts-container {
-    border: 2px solid forestgreen;
+    background-color: rgb(241, 241, 241);
+    
     grid-row: 3 / 4;
     grid-column: 2 / 3;
+  }
+
+  .post-card {
+    width: 90%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   }
 
 
