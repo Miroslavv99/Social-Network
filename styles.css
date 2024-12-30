@@ -4,61 +4,94 @@
     box-sizing: border-box;
   }
   
+  body {
+    overflow-y: auto;
+    background-color: rgb(241, 241, 241);
+  }
+  
   .main {
+    overflow-y: auto;
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 6fr;
+    grid-template-rows: 100px 0.7fr 3fr;
     background-color: rgb(241, 241, 241);
-    gap: 40px;
   }
   
   .navigation {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     background-color: rgb(220, 79, 61);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+    margin-bottom: 20px;
   }
   
   .sidebar {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    
+    display: grid;
+    grid-template-rows: 400px 600px auto;
+    gap: 40px;
+    background-color: rgb(241, 241, 241);
+    height: auto;
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-    margin-left: 10%;
+    padding: 20px;
+  }
+
+  .account {
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .favorites {
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   }
 
   .suggestions {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    background-color: rgb(241, 241, 241);
     grid-row: 2 / 4;
     grid-column: 3 / 4;
-    margin-right: 10%;
+    padding: 20px;
   }
 
 
   .post-editor {
+    padding: 20px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .post-editor__content {
+    min-height: 104px;
+    position: sticky;
+    top: 0;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
   }
 
   .input-container {
     display: flex;
     position: relative;
     width: 70%;
-    height: 70%;
+    height: 65%;
   }
 
   #post-input {
     padding-right: 40px;
     width: 100%;
     height: 100%;
-    border-radius: 30px;
+    border-radius: 35px;
     border: none;
     background-color: rgb(241, 241, 241);
     text-indent: 5%;
@@ -85,15 +118,22 @@
   }
   
   .posts-container {
-    background-color: rgb(241, 241, 241);
-    
+    padding: 20px;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
   }
 
+  .posts-container_content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
   .post-card {
-    width: 90%;
-    height: 400px;
+    overflow: hidden;
+    height: 300px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   }
