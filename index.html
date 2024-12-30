@@ -10,21 +10,28 @@
   <body>
     <div class="main">
       <nav class="navigation"></nav>
-      <div class="sidebar"></div>
+      <div class="sidebar">
+        <div class="account"></div>
+        <div class="favorites"></div>
+      </div>
       <div class="suggestions"></div>
       <div class="post-editor">
-        <img
-          src="images/dinosaur.png"
-          alt="penguin"
-          width="60px"
-          height="60px"
-        />
-        <div class="input-container">
-          <input id="post-input" type="text" placeholder="Say Something" />
-          <button type="button" id="share">SHARE</button>
+        <div class="post-editor__content">
+          <img
+            src="images/dinosaur.png"
+            alt="penguin"
+            width="55px"
+            height="55px"
+          />
+          <div class="input-container">
+            <input id="post-input" type="text" placeholder="Say Something" />
+            <button type="button" id="share">SHARE</button>
+          </div>
         </div>
       </div>
-      <div class="posts-container"></div>
+      <div class="posts-container">
+        <div class="posts-container_content"></div>
+      </div>
     </div>
   </body>
 </html>
