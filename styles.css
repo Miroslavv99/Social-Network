@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
   }
   
   body {
@@ -18,7 +19,10 @@
     background-color: rgb(241, 241, 241);
   }
   
-  .navigation {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -28,9 +32,58 @@
     grid-row: 1 / 2;
     margin-bottom: 20px;
   }
+
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu button {
+    all: unset;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    
+  }
+
+  .menu button:hover {
+    color: rgb(218, 218, 218);
+  }
+
+
+
+  .logo {
+    position: relative;
+    left: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .search input {
+    font-size: 1.3rem;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: rgb(220, 79, 61);
+    width: 300px;
+  }
+
+  .input-svg {
+    position: relative;
+    right: 30px;
+    top: 8px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  .search input::placeholder {
+    color: rgb(255, 255, 255);
+  }
   
   .sidebar {
-    
     display: grid;
     grid-template-rows: 400px 600px auto;
     gap: 40px;
@@ -42,10 +95,23 @@
   }
 
   .account {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
     height: 400px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  }
 
+  .profile-background {
+    background: url('/images/profile_background.jpg');
+    background-size: cover;
+  }
+
+  .profile-background img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 66%;
   }
 
   .favorites {
@@ -55,10 +121,23 @@
   }
 
   .suggestions {
+    display: grid;
+    gap: 40px;
+    grid-template-rows: 600px 600px auto;
     background-color: rgb(241, 241, 241);
     grid-row: 2 / 4;
     grid-column: 3 / 4;
     padding: 20px;
+  }
+
+  .notifications {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .advertizement {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
   }
 
 
