@@ -3,13 +3,19 @@ export const postsContainer = document.querySelector('.posts-container_content')
 export class Post {
     _posts = [];
    
-    addPost(information) {
-        const post = { information }; 
+    addPost(information, likes = 0) {
+        const post = { information, likes }; 
         this._posts.push(post);
     }
 
     removePost(index) {
         this._posts.splice(index, 1);
+        this.displayPost();
+    }
+
+    likePost(index) {
+        this._posts[index].likes++;
+        this.displayPost()
     }
 
     displayPost() {
@@ -28,7 +34,6 @@ export class Post {
             postCardHeader.appendChild(deleteButton);
             deleteButton.addEventListener('click', () => {
                 this.removePost(index);
-                this.displayPost();
             });
 
             const profileImage = document.getElementById('profile-image').cloneNode(true);
@@ -46,6 +51,24 @@ export class Post {
             postText.classList.add('post-text');
             postText.innerHTML = `${post.information}`;
             postCard.appendChild(postText);
+
+            const likeContainer = document.createElement('div')
+            likeContainer.classList.add('like-container')
+            postCard.appendChild(likeContainer)
+
+            const likeButton = document.createElement('button')
+            likeButton.classList.add('like-button')
+            likeContainer.appendChild(likeButton)
+
+            const likeCount = document.createElement('div')
+            likeCount.classList.add('like-count')
+            likeContainer.appendChild(likeCount)
+            likeCount.innerHTML = `${post.likes}`
+
+           
+            likeButton.addEventListener('click', () => {
+               this.likePost(index)
+            })
         });
     }
 }
